@@ -1,19 +1,18 @@
 
 from .models import Profile
-from django.shortcuts import render
 from .forms import DweetForm
+from django.shortcuts import render, redirect
 
-
-# dwitter/views.py
+# ...
 
 def dashboard(request):
+    form = DweetForm(request.POST or None)
     if request.method == "POST":
-        form = DweetForm(request.POST)
         if form.is_valid():
             dweet = form.save(commit=False)
             dweet.user = request.user
             dweet.save()
-    form = DweetForm()
+            return redirect("dwitter:dashboard")
     return render(request, "dwitter/dashboard.html", {"form": form})
 
 
