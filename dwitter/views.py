@@ -1,14 +1,20 @@
+
+from .models import Profile
+from django.shortcuts import render
+from .forms import DweetForm
+
+
 # dwitter/views.py
 
-from django.shortcuts import render
-from .models import Profile
-
-from django.shortcuts import render
-from .models import Profile
-
-
 def dashboard(request):
-    return render(request, "dwitter/dashboard.html")
+    if request.method == "POST":
+        form = DweetForm(request.POST)
+        if form.is_valid():
+            dweet = form.save(commit=False)
+            dweet.user = request.user
+            dweet.save()
+    form = DweetForm()
+    return render(request, "dwitter/dashboard.html", {"form": form})
 
 
 def profile_list(request):
