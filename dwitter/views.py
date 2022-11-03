@@ -3,9 +3,12 @@
 from django.shortcuts import render
 from .models import Profile
 
+from django.shortcuts import render
+from .models import Profile
+
 
 def dashboard(request):
-    return render(request, "base.html")
+    return render(request, "dwitter/dashboard.html")
 
 
 def profile_list(request):
