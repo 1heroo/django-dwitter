@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User, Group
 
-from .models import Profile
+from .models import Profile, Dweet
 
 
 class ItemInline(admin.StackedInline):
@@ -15,7 +15,7 @@ class UserAdmin(admin.ModelAdmin):
     # Only display the "username" field
     fields = ["username"]
 
-
+admin.site.register(Dweet)
 admin.site.register(Profile)
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
