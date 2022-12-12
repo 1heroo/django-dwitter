@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyAbstractClassInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyMethodMayBeStaticInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="selenium" />
+            <item index="1" class="java.lang.String" itemvalue="decouple" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="aiohttp.client_reqrep.ClientResponse.__await__" />
+          <option value="core.CRUD.views.*" />
+          <option value="api.models.Card.objects" />
+          <option value="api.models.Column.objects" />
+          <option value="api.models.Board.objects" />
+          <option value="api.models.Image.objects" />
+          <option value="api.models.ImageBoard.objects" />
+          <option value="api.models.Mark.objects" />
+          <option value="api.models.BoardMembers.objects" />
+          <option value="api.models.FavourBoards.objects" />
+          <option value="api.models.Members.objects" />
+          <option value="api.models.FavouriteBoards.objects" />
+          <option value="api.models.Comment.objects" />
+          <option value="api.models.File.objects" />
+          <option value="api.models.MarkCard.objects" />
+          <option value="todo_app.models.ToDoList.objects" />
+          <option value="todo_app.models.ToDoItem.objects" />
+          <option value="entries.models.Entry.objects" />
+          <option value="cards.models.Card.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
